@@ -1,0 +1,30 @@
+{
+  "name": "ws2postman",
+  "version": "1.0.0",
+  "description": "Generate Postman format files (.json) from a WSDL (URL)",
+  "main": "index.js",
+  "author": "Miguel Freitas",
+  "license": "MIT License",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelfreitas93/wsdl2postman.git"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha tests --recursive",
+    "gen-coverage-report": "nyc -x tests -r html --report-dir=coverage npm test",
+    "check-coverage": "nyc check-coverage --functions 45 --lines 0 --per-file"
+  },
+  "dependencies": {
+    "log4js": "^4.3.1",
+    "path": "^0.12.7",
+    "pretty-data": "^0.40.0",
+    "soap": "^0.27.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0"
+  }
+}
